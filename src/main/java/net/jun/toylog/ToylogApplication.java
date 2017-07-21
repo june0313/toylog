@@ -1,4 +1,4 @@
-package net.jun;
+package net.jun.toylog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
