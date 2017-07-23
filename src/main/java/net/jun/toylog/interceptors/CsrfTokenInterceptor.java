@@ -18,7 +18,7 @@ public class CsrfTokenInterceptor extends HandlerInterceptorAdapter {
 
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-		modelAndView.addObject(CSRF_PARAMETER_NAME, request.getAttribute("_csrf"));
+		modelAndView.addObject(CSRF_PARAMETER_NAME, request.getAttribute(CSRF_PARAMETER_NAME));
 	}
 
 }
