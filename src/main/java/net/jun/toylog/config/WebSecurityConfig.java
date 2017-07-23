@@ -8,7 +8,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 /**
  * Created by wayne on 2017. 7. 22..
- *
  */
 @Configuration
 @EnableWebSecurity
@@ -17,9 +16,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
-			.authorizeRequests()
-			.anyRequest()
-			.permitAll();
+			.authorizeRequests().anyRequest().permitAll()
+			.and()
+			.csrf().ignoringAntMatchers("/h2-console/**")
+			.and()
+			.headers().frameOptions().disable();
 	}
 
 	@Override
