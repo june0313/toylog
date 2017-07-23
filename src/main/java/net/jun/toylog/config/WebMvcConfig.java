@@ -17,7 +17,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(csrfTokenInterceptor).addPathPatterns("/signUp");
+		registry.addInterceptor(csrfTokenInterceptor).addPathPatterns("/signUp", "/login");
 	}
 
 	@Autowired
