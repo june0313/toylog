@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    {{> common/head}}
+
+    <title>
+        {{#block "pageTitle"}}
+            Toylog
+        {{/block}}
+    </title>
+</head>
+<body>
+<div class="container">
+    {{> common/navigationBar}}
+
+    {{#block "content"}}
+    {{/block}}
+</div>
+
+{{> common/script}}
+</body>
+</html>
